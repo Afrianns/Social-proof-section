@@ -1,0 +1,254 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Spartan", sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	position: relative;
+}
+.bg-1 {
+	position: absolute;
+	right: 0;
+	background-position: left;
+	background-size: 100%;
+	background-image: url(/images/bg-pattern-bottom-desktop.svg);
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 100%;
+}
+
+.bg-2 {
+	position: absolute;
+	background-position: right;
+	background-size: 100%;
+	background-image: url(/images/bg-pattern-top-desktop.svg);
+	background-repeat: no-repeat;
+	width: 60%;
+	height: 60%;
+}
+
+.content {
+	color: hsl(300, 43%, 22%);
+	display: grid;
+	padding: 5px;
+	margin: 0 1rem 1rem 1rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+	font-size: 2.5rem;
+	width: 400px;
+	font-weight: 700;
+	margin: 20px 0;
+}
+
+.left-content p {
+	width: 30rem;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+.right-content {
+	margin-top: 1rem;
+	align-self: center;
+}
+
+.right-content h3 {
+	font-size: 1rem;
+	position: relative;
+	padding: 10px 30px 10px 150px;
+	margin: 15px;
+	border-radius: 10px;
+	display: inline-block;
+	background: hsl(300, 24%, 96%);
+}
+
+.right-content h3:before {
+	content: "";
+	background-image: url(/images/icon-star.svg);
+	position: absolute;
+	left: 20px;
+	width: 100px;
+	height: 15px;
+}
+
+.right-content h3:first-child {
+	margin-left: -5px;
+}
+
+.right-content h3:last-child {
+	margin-left: 50px;
+	padding-right: 50px;
+}
+
+.testimoni {
+	margin: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 15rem;
+}
+
+.testimon {
+	border-radius: 10px;
+	padding: 1rem;
+	width: 90%;
+	height: 90%;
+	background-color: hsl(300, 43%, 22%);
+	color: hsl(0, 0%, 100%);
+	justify-self: center;
+}
+
+.testimon p {
+	line-height: 1.5;
+	font-weight: 400;
+	font-size: 0.8rem;
+}
+
+h4 {
+	color: hsl(303, 10%, 53%);
+}
+
+.identity {
+	margin: 15px 0;
+	position: relative;
+	left: 70px;
+	display: inline-block;
+}
+
+.identity:before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	left: -60px;
+	top: -5px;
+	border-radius: 50%;
+	background-size: cover;
+	position: absolute;
+}
+
+.part-1 {
+	align-self: flex-start;
+}
+.part-2 {
+	align-self: center;
+}
+.part-3 {
+	align-self: flex-end;
+}
+
+.identity-1:before {
+	background-image: url(/images/image-colton.jpg);
+}
+
+.identity-2:before {
+	background-image: url(/images/image-irene.jpg);
+}
+
+.identity-3:before {
+	background-image: url(/images/image-anne.jpg);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 900px) {
+	.testimoni {
+		margin: 2%;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+
+	.testimon {
+		padding: 20px;
+	}
+
+	.testimon p {
+		padding: 20px 0;
+	}
+
+	.left-content p,
+	h1 {
+		width: 100%;
+	}
+	.content {
+		place-items: center;
+		text-align: center;
+		grid-template-columns: 1fr;
+	}
+
+	.right-content {
+		display: grid;
+		place-items: center;
+	}
+
+	.right-content h3 {
+		width: 100%;
+		height: 90%;
+		margin: 10px 0;
+		padding-right: 50px;
+	}
+
+	.right-content h3:before {
+		content: "";
+		background-image: url(/images/icon-star.svg);
+		position: absolute;
+		left: 20px;
+		height: 15px;
+	}
+
+	.right-content h3:last-child {
+		margin-left: 0;
+	}
+
+	.bg-1 {
+		background-image: url(/images/bg-pattern-bottom-mobile.svg);
+		width: 50vh;
+		height: 50vh;
+		background-size: 100%;
+		margin-top: 91%;
+	}
+
+	.bg-2 {
+		background-image: url(/images/bg-pattern-top-mobile.svg);
+		background-position: top;
+	}
+}
+
+@media (max-width: 543px) {
+	.container {
+		margin: 0;
+	}
+	.content {
+		margin: 1px;
+	}
+
+	.testimoni {
+		margin: 50px 0;
+	}
+
+	.right-content h3 {
+		width: 100%;
+		height: 100px;
+		margin: 10px 0;
+		padding: 50px;
+	}
+
+	.right-content h3:before {
+		content: "";
+		background-image: url(/images/icon-star.svg);
+		position: absolute;
+		left: 35%;
+		top: 15px;
+	}
+}
